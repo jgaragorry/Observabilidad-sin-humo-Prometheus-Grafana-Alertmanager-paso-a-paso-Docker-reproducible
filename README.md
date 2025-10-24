@@ -113,9 +113,9 @@ capturas/
 ## 👨‍🏫 Autor y comunidad
 
 **Autor:** José Garagorry  
-**LinkedIn:** [linkedin.com/in/josegaragorry](https://linkedin.com/in/josegaragorry)  
-**GitHub:** [github.com/josegaragorry](https://github.com/josegaragorry)  
-**TikTok:** [@stclatam](https://www.tiktok.com/@softraincorp)
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
+**TikTok:** [@stclatam](https://www.tiktok.com/@stclatam)  
 **Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
 **WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/BXvYJvYqvJH2gJZpXxYxYx)
 
