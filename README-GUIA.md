@@ -89,14 +89,18 @@ Estos scripts permiten ejecutar el workshop de forma segura, didáctica y repeti
 **Explicación:**
 La documentación está diseñada para enseñar, compartir y escalar este workshop como recurso educativo reproducible.
 
+
 ---
 
-## 📬 Contacto y comunidad
+## 👨<200d>🏫 Autor y comunidad
 
-**Autor:** José Garagorry  
-**LinkedIn:** [linkedin.com/in/josegaragorry](https://linkedin.com/in/josegaragorry)  
-**GitHub:** [github.com/josegaragorry](https://github.com/josegaragorry)  
-**TikTok:** [@stclatam](https://www.tiktok.com/@stclatam)  
-**Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
-**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/BXvYJvYqvJH2gJZpXxYxYx)
+
+**Autor:** José Garagorry
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)
+**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)
+**Instagram:** [@stclatam](https://www.instagram.com/stclatam)
+**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
+
+---
 

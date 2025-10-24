@@ -67,18 +67,21 @@ Este proyecto fue ejecutado y validado en entorno real. Se corrigieron errores c
 - `README-TEST.md` → validación real
 - `README-FINAL.md` → resumen para reclutadores
 
----
-
-## 👨‍🏫 Autor y comunidad
-
-**Autor:** José Garagorry  
-**LinkedIn:** [linkedin.com/in/josegaragorry](https://linkedin.com/in/josegaragorry)  
-**GitHub:** [github.com/josegaragorry](https://github.com/josegaragorry)  
-**TikTok:** [@stclatam](https://www.tiktok.com/@stclatam)  
-**Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
-**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/BXvYJvYqvJH2gJZpXxYxYx)
 
 ---
+
+## 👨<200d>🏫 Autor y comunidad
+
+
+**Autor:** José Garagorry
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)
+**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)
+**Instagram:** [@stclatam](https://www.instagram.com/stclatam)
+**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
+
+---
+
 
 Este proyecto está listo para enseñar, compartir y escalar. Cada error corregido es parte del aprendizaje. Cada script y archivo está validado en ejecución real.
 
