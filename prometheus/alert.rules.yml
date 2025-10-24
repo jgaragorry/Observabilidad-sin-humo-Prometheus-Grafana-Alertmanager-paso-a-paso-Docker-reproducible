@@ -1,0 +1,18 @@
+groups:
+  - name: node_alerts
+    rules:
+      - alert: HighLoad
+        expr: avg(node_load1) > 0.1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: Carga alta detectada en la instancia
+          description: La carga promedio de 1 minuto es superior a 0.1
+
+# 🧠 Nota didáctica:
+# Este umbral fue ajustado desde 0.5 a 0.1 para permitir que la alerta se dispare
+# en entornos livianos como WSL2, Docker Desktop o máquinas sin carga real.
+# Esto garantiza que los estudiantes puedan ver la alerta activa en Grafana
+# sin necesidad de generar procesos artificiales.
+

@@ -1,0 +1,32 @@
+# Logs y temporales
+*.log
+*.tmp
+
+# Archivos de entorno
+.env
+.env.*
+
+# Docker
+**/__pycache__/
+**/.DS_Store
+**/.idea/
+**/.vscode/
+**/.history/
+**/.terraform/
+**/.venv/
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+**/.dockerignore
+
+# Volúmenes y datos persistentes
+grafana/data/
+prometheus/data/
+alertmanager/data/
+
+# Archivos generados por el sistema
+*.swp
+*.swo
+*.bak
+
