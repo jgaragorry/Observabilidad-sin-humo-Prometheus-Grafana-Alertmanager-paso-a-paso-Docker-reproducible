@@ -112,6 +112,7 @@ capturas/
 
 ## 👨‍🏫 Autor y comunidad
 
+
 **Autor:** José Garagorry  
 **LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
 **GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
