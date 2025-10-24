@@ -22,10 +22,10 @@ Este script elimina todos los contenedores, redes y volúmenes previos. Deja el 
 
 Este script valida la estructura del proyecto y levanta los servicios:
 
-- Prometheus → http://localhost:9090
-- Grafana → http://localhost:3000 (usuario: admin / contraseña: admin)
-- Alertmanager → http://localhost:9093
-- Node Exporter → http://localhost:9100
+- Prometheus → http://localhost:9090  
+- Grafana → http://localhost:3000 (usuario: admin / contraseña: admin)  
+- Alertmanager → http://localhost:9093  
+- Node Exporter → http://localhost:9100  
 
 ---
 
@@ -37,10 +37,10 @@ Este script valida la estructura del proyecto y levanta los servicios:
 
 Este script verifica:
 
-- Archivos y carpetas del proyecto
-- Puertos activos
-- Conectividad entre servicios
-- Simulación de alerta
+- Archivos y carpetas del proyecto  
+- Puertos activos  
+- Conectividad entre servicios  
+- Simulación de alerta  
 
 ---
 
@@ -54,9 +54,9 @@ Este script fue corregido para usar `wget` en lugar de `curl`, ya que `curl` no 
 
 **Resultado esperado:**
 
-- ✔ Prometheus puede alcanzar Node Exporter
-- ✔ Prometheus puede alcanzar Alertmanager
-- ✔ Grafana puede alcanzar Prometheus
+- ✔ Prometheus puede alcanzar Node Exporter  
+- ✔ Prometheus puede alcanzar Alertmanager  
+- ✔ Grafana puede alcanzar Prometheus  
 
 ---
 
@@ -70,17 +70,15 @@ Este script fue corregido para validar si la alerta existe antes de parsear con 
 
 **Resultado esperado:**
 
-- ✔ Alerta `HighLoad` disparada
-- ✔ Estado `alerting` visible en Grafana
-- ✔ Panel de alerta activo en el dashboard
+- ✔ Alerta `HighLoad` disparada  
+- ✔ Estado `alerting` visible en Grafana  
+- ✔ Panel de alerta activo en el dashboard  
 
 ---
 
 ## 🔥 Paso 6: Forzar carga para disparar la alerta
 
 En entornos livianos, la carga promedio puede ser muy baja. Para simular carga y disparar la alerta:
-
-### Opción 1: Generar carga desde el host
 
 ```bash
 for i in {1..4}; do yes > /dev/null & done
@@ -110,9 +108,9 @@ Accede a Grafana:
 http://localhost:3000
 ```
 
-- Ve al dashboard `Node Exporter Alerts`
-- Verifica los paneles de CPU y memoria
-- Verifica el estado de la alerta en `Alerting > Alert Rules`
+- Ve al dashboard `Node Exporter Alerts`  
+- Verifica los paneles de CPU y memoria  
+- Verifica el estado de la alerta en `Alerting > Alert Rules`  
 
 ---
 
@@ -131,9 +129,22 @@ En entornos livianos, la carga promedio rara vez supera 0.5. Ajustar el umbral p
 
 Si todos los pasos anteriores funcionan, el entorno está:
 
-- ✔ Validado
-- ✔ Reproducible
-- ✔ Listo para enseñar
+- ✔ Validado  
+- ✔ Reproducible  
+- ✔ Listo para enseñar  
 
 Este archivo se actualiza con cada mejora aplicada al workshop.
+
+---
+
+## 👨‍🏫 Autor y comunidad
+
+**Autor:** José Garagorry  
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
+**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)  
+**Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
+**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
+
+---
 

@@ -1,95 +1,75 @@
-# 🧪 Validación funcional del workshop
+# 🧪 Validación técnica del workshop — Observabilidad sin humo
 
-Este documento registra las pruebas reales realizadas para verificar que el entorno del workshop funciona correctamente, que las alertas se disparan y que los dashboards se cargan como se espera.
-
----
-
-## ✅ Validación 1: Dashboard Grafana
-
-**Prueba:** Verificar que el dashboard `Node Exporter Alerts` se carga automáticamente al iniciar Grafana.
-
-**Resultado:**  
-✔ Dashboard cargado correctamente  
-✔ No aparece el error `"Dashboard title cannot be empty"`  
-✔ Paneles muestran métricas reales
-
-**Acceso:**  
-http://localhost:3000 (usuario: admin / contraseña: admin)
+Este documento registra las validaciones reales realizadas durante la ejecución del workshop. Cada error detectado fue corregido y documentado como parte del aprendizaje didáctico.
 
 ---
 
-## ✅ Validación 2: Collector `filesystem` en Node Exporter
+## ✅ Validaciones confirmadas
 
-**Prueba:** Verificar logs de Node Exporter y comportamiento del collector `filesystem`.
-
-**Resultado original:**  
-❌ Error recurrente en los logs:
-```
-collector failed name=filesystem err="malformed mount point information"
-```
-
-**Diagnóstico:**  
-Este error ocurre en entornos como WSL2 o Docker con Snap, donde los puntos de montaje del sistema de archivos no son compatibles con el collector `filesystem`.
-
-**Corrección aplicada:**  
-Se desactivó el collector `filesystem` en `docker-compose.yml` usando:
-
-```yaml
-command:
-  - '--no-collector.filesystem'
-```
-
-**Resultado tras corrección:**  
-✔ Error eliminado de los logs  
-✔ Node Exporter sigue recolectando métricas del sistema  
-✔ Entorno más limpio y didáctico para estudiantes
-
-**⚠️ Advertencia reproducible:**  
-En entornos WSL2 o Docker con Snap, se recomienda desactivar el collector `filesystem` para evitar ruido en los logs y mantener la reproducibilidad del workshop.
+- ✔ Todos los servicios se levantan correctamente con `start.sh`
+- ✔ Conectividad entre contenedores validada con `debug.sh`
+- ✔ Simulación de alerta `HighLoad` confirmada con `test-alert.sh`
+- ✔ Dashboards cargados automáticamente en Grafana
+- ✔ Alertas visibles en `Alerting > Alert Rules`
 
 ---
 
-## ✅ Validación 3: Nombres de contenedores
+## 🧠 Correcciones aplicadas
 
-**Prueba:** Verificar que los scripts pueden ejecutar comandos dentro de los contenedores.
+### 🔧 Error: `Dashboard title cannot be empty`
 
-**Resultado original:**  
-❌ Error `"No such container"` en `validate-all.sh`, `debug.sh` y `test-alert.sh`
-
-**Diagnóstico:**  
-Docker Compose generaba nombres automáticos para los contenedores. Los scripts esperaban nombres explícitos (`prometheus`, `grafana`, etc.)
-
-**Corrección aplicada:**  
-Se agregó `container_name:` en `docker-compose.yml` para cada servicio.
-
-**Resultado tras corrección:**  
-✔ Scripts pueden ejecutar comandos correctamente  
-✔ Validación integral funciona sin errores
+**Causa:** El archivo `node.json` tenía un campo `title` vacío  
+**Solución:** Se agregó `"title": "Node Exporter Alerts"` al dashboard
 
 ---
 
-## ✅ Validación 4: Scripts `debug.sh` y `test-alert.sh`
+### 🔧 Error: `filesystem` collector en Node Exporter
 
-**Prueba:** Ejecutar diagnóstico de conectividad y simulación de alerta.
-
-**Correcciones aplicadas:**
-- `debug.sh` usa `wget` en lugar de `curl`
-- `test-alert.sh` valida si la alerta existe antes de parsear con `jq`
-
-**Resultado:**
-✔ `debug.sh` confirma conectividad entre servicios  
-✔ `test-alert.sh` muestra mensaje claro si la alerta no está disparada  
-✔ Ambos scripts son ahora didácticos y reproducibles
+**Causa:** El collector `filesystem` genera errores en entornos como WSL2 o Docker Desktop  
+**Solución:** Se desactivó con el flag `--no-collector.filesystem` en `docker-compose.yml`
 
 ---
 
-## 🧪 Validación final
+### 🔧 Error: alerta no se dispara
 
-**Script:** `validate-all.sh`  
-✔ Verifica estructura, conectividad y propagación  
-✔ Ideal para confirmar que el entorno está listo para enseñar
+**Causa:** El umbral original era `avg(node_load1) > 0.5`, demasiado alto para entornos livianos  
+**Solución:** Se ajustó a `avg(node_load1) > 0.1` en `alert.rules.yml`
 
 ---
 
-Este archivo se actualiza con cada validación real del workshop. Cada error corregido se documenta como parte del proceso didáctico y reproducible.
+### 🔧 Error: `curl` no disponible en contenedor Prometheus
+
+**Causa:** El script `debug.sh` usaba `curl`, pero la imagen oficial no lo incluye  
+**Solución:** Se reemplazó por `wget` para validar conectividad
+
+---
+
+### 🔧 Error: `jq` falla si no hay alertas activas
+
+**Causa:** El script `test-alert.sh` asumía que siempre habría alertas  
+**Solución:** Se agregó validación previa para evitar parseo vacío
+
+---
+
+## 📊 Resultado final
+
+- ✔ Alertas disparadas y visibles en Grafana  
+- ✔ Paneles funcionales y didácticos  
+- ✔ Scripts robustos y reproducibles  
+- ✔ Documentación actualizada con cada corrección
+
+Este archivo se actualiza con cada validación técnica y mejora aplicada al workshop.
+
+---
+
+## 👨‍🏫 Autor y comunidad
+
+**Autor:** José Garagorry  
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
+**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)  
+**Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
+**WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
+
+---
 

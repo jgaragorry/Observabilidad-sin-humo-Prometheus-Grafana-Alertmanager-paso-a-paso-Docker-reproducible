@@ -1,87 +1,85 @@
-# 🚀 Proyecto validado — Workshop Observabilidad sin humo
+# 🏁 Versión final del workshop — Observabilidad sin humo
 
-![Reproducible](https://img.shields.io/badge/Reproducible-100%25-green)
-![Stack](https://img.shields.io/badge/Stack-Prometheus%20%7C%20Grafana%20%7C%20Alertmanager-yellow)
-![Nivel](https://img.shields.io/badge/Nivel-Did%C3%A1ctico%20y%20Profesional-blue)
-
-Este proyecto fue diseñado, ejecutado y validado por José Garagorry como parte de su portafolio técnico y educativo. Enseña observabilidad con Prometheus, Grafana y Alertmanager en un entorno Docker completamente reproducible, documentado y funcional.
+Este documento resume el estado final del proyecto, listo para ser compartido con estudiantes, reclutadores o comunidad técnica. Incluye validaciones reales, estructura profesional y buenas prácticas aplicadas.
 
 ---
 
-## 🧠 Propósito
+## 📦 Stack reproducible
 
-- Enseñar observabilidad sin humo ni magia
-- Validar cada paso con ejecución real
-- Documentar errores y correcciones como parte del aprendizaje
-- Compartir un entorno reproducible para estudiantes, docentes y reclutadores
-
----
-
-## 📦 Componentes del stack
-
-| Servicio       | Puerto | Descripción                            |
-|----------------|--------|----------------------------------------|
-| Prometheus     | 9090   | Recolección de métricas y alertas      |
-| Grafana        | 3000   | Visualización de métricas y alertas    |
-| Alertmanager   | 9093   | Agrupamiento y gestión de alertas      |
-| Node Exporter  | 9100   | Métricas del sistema host              |
+- Prometheus → recolección de métricas y alertas  
+- Grafana → visualización de métricas y alertas  
+- Alertmanager → agrupamiento y gestión de alertas  
+- Node Exporter → métricas del sistema host  
+- Docker Compose → orquestación del stack  
+- Bash scripts → automatización y validación  
 
 ---
 
-## 📁 Estructura validada
+## 📁 Estructura del proyecto
 
-- `docker-compose.yml` → stack reproducible con nombres de contenedor explícitos
-- `prometheus/` → configuración y reglas de alerta
-- `alertmanager/` → configuración de receptores
-- `grafana/` → dashboards y datasources provisionados
-- `scripts/` → automatización, validación y simulación
-- `README-GUIA.md` → guía por fases
-- `README-STEPS.md` → ejecución paso a paso
-- `README-TEST.md` → validación funcional real
-- `README.md` → presentación técnica
-- `README-FINAL.md` → resumen profesional
+```text
+.
+├── docker-compose.yml
+├── .dockerignore
+├── prometheus/
+│   ├── prometheus.yml
+│   └── alert.rules.yml
+├── grafana/
+│   ├── dashboards/
+│   │   ├── node.json
+│   │   └── dashboard.yml
+│   └── datasources/
+│       └── datasource.yml
+├── alertmanager/
+│   └── config.yml
+├── scripts/
+│   ├── start.sh
+│   ├── reset.sh
+│   ├── validate-all.sh
+│   ├── debug.sh
+│   └── test-alert.sh
+├── README.md
+├── README-GUIA.md
+├── README-STEPS.md
+├── README-TEST.md
+└── README-FINAL.md
+```
 
 ---
 
 ## ✅ Validaciones reales
 
-Este proyecto fue ejecutado y validado en entorno real. Se corrigieron errores como:
-
-- `"Dashboard title cannot be empty"` → solucionado en `node.json`
-- Error del collector `filesystem` → desactivado para reproducibilidad
-- Nombres de contenedor → definidos para compatibilidad con scripts
-- Scripts `debug.sh` y `test-alert.sh` → mejorados para entornos reales
-
-**Resultado:**  
-✔ Todos los servicios activos  
-✔ Dashboards cargados  
-✔ Alertas simuladas y propagadas  
-✔ Scripts funcionales y didácticos
+- ✔ Servicios activos y conectados  
+- ✔ Dashboards cargados automáticamente  
+- ✔ Alertas disparadas y visibles en Grafana  
+- ✔ Scripts funcionales y didácticos  
+- ✔ Documentación actualizada con cada corrección  
 
 ---
 
-## 📚 Documentación completa
+## 🧠 Buenas prácticas aplicadas
 
-- `README-GUIA.md` → guía por fases
-- `README-STEPS.md` → ejecución paso a paso
-- `README-TEST.md` → validación real
-- `README-FINAL.md` → resumen para reclutadores
-
+- `.dockerignore` incluido para modelar estándares profesionales  
+- Umbral de alerta ajustado para entornos livianos  
+- Scripts robustos con validaciones previas  
+- Documentación dividida por fases y propósitos  
 
 ---
 
-## 👨<200d>🏫 Autor y comunidad
+## 📣 Listo para enseñar y compartir
 
+Este proyecto está validado en ejecución real y documentado para ser enseñado, grabado o presentado. Cada error corregido se convierte en una lección. Cada archivo tiene un propósito claro. El entorno es reproducible y profesional.
 
-**Autor:** José Garagorry
-**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)
-**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)
-**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)
-**Instagram:** [@stclatam](https://www.instagram.com/stclatam)
+---
+
+## 👨‍🏫 Autor y comunidad
+
+**Autor:** José Garagorry  
+**LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
+**GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
+**TikTok:** [@stclatam](https://www.tiktok.com/@softtraincorp)  
+**Instagram:** [@stclatam](https://www.instagram.com/stclatam)  
 **WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
 
 ---
-
-
-Este proyecto está listo para enseñar, compartir y escalar. Cada error corregido es parte del aprendizaje. Cada script y archivo está validado en ejecución real.
 

@@ -10,10 +10,10 @@ Este workshop enseña observabilidad con Prometheus, Grafana y Alertmanager en u
 
 ## 🧠 Propósito
 
-- Enseñar observabilidad sin humo ni magia
-- Validar cada paso con ejecución real
-- Documentar errores y correcciones como parte del aprendizaje
-- Compartir un entorno reproducible para estudiantes, docentes y reclutadores
+- Enseñar observabilidad sin humo ni magia  
+- Validar cada paso con ejecución real  
+- Documentar errores y correcciones como parte del aprendizaje  
+- Compartir un entorno reproducible para estudiantes, docentes y reclutadores  
 
 ---
 
@@ -30,14 +30,14 @@ Este workshop enseña observabilidad con Prometheus, Grafana y Alertmanager en u
 
 ## 📁 Estructura del proyecto
 
-- `docker-compose.yml` → stack reproducible con nombres de contenedor explícitos
-- `prometheus/` → configuración y reglas de alerta
-- `alertmanager/` → configuración de receptores
-- `grafana/` → dashboards y datasources provisionados
-- `scripts/` → automatización, validación y simulación
-- `README-GUIA.md` → guía por fases
-- `README-STEPS.md` → ejecución paso a paso
-- `README-TEST.md` → validación funcional real
+- `docker-compose.yml` → stack reproducible con nombres de contenedor explícitos  
+- `prometheus/` → configuración y reglas de alerta  
+- `alertmanager/` → configuración de receptores  
+- `grafana/` → dashboards y datasources provisionados  
+- `scripts/` → automatización, validación y simulación  
+- `README-GUIA.md` → guía por fases  
+- `README-STEPS.md` → ejecución paso a paso  
+- `README-TEST.md` → validación funcional real  
 
 ---
 
@@ -45,16 +45,16 @@ Este workshop enseña observabilidad con Prometheus, Grafana y Alertmanager en u
 
 Este workshop fue ejecutado y validado en entorno real. Se corrigieron errores como:
 
-- `"Dashboard title cannot be empty"` → solucionado en `node.json`
-- Error del collector `filesystem` → desactivado para reproducibilidad
-- Nombres de contenedor → definidos para compatibilidad con scripts
-- Scripts `debug.sh` y `test-alert.sh` → mejorados para entornos reales
+- `"Dashboard title cannot be empty"` → solucionado en `node.json`  
+- Error del collector `filesystem` → desactivado para reproducibilidad  
+- Nombres de contenedor → definidos para compatibilidad con scripts  
+- Scripts `debug.sh` y `test-alert.sh` → mejorados para entornos reales  
 
 **Resultado:**  
 ✔ Todos los servicios activos  
 ✔ Dashboards cargados  
 ✔ Alertas simuladas y propagadas  
-✔ Scripts funcionales y didácticos
+✔ Scripts funcionales y didácticos  
 
 ---
 
@@ -70,10 +70,10 @@ Este script ejecuta todo el flujo: validación, inicio, logs y simulación de al
 
 ## 📚 Documentación completa
 
-- `README-GUIA.md` → guía por fases
-- `README-STEPS.md` → ejecución paso a paso
-- `README-TEST.md` → validación real
-- `README-FINAL.md` → (opcional) resumen para reclutadores
+- `README-GUIA.md` → guía por fases  
+- `README-STEPS.md` → ejecución paso a paso  
+- `README-TEST.md` → validación real  
+- `README-FINAL.md` → (opcional) resumen para reclutadores  
 
 ---
 
@@ -112,7 +112,6 @@ capturas/
 
 ## 👨‍🏫 Autor y comunidad
 
-
 **Autor:** José Garagorry  
 **LinkedIn:** [linkedin.com/in/jgaragorry](https://linkedin.com/in/jgaragorry)  
 **GitHub:** [github.com/jgaragorry](https://github.com/jgaragorry)  
@@ -121,6 +120,4 @@ capturas/
 **WhatsApp Comunidad:** [Únete aquí](https://chat.whatsapp.com/ENuRMnZ38fv1pk0mHlSixa)
 
 ---
-
-Este proyecto está listo para enseñar, compartir y escalar. Cada error corregido es parte del aprendizaje. Cada script y archivo está validado en ejecución real.
 
